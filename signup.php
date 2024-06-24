@@ -8,6 +8,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
+    // Set default user type
+    $user_type = 'user';
+
     // Validate email (example, you can use a more thorough validation method)
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         echo "Invalid email format.";
@@ -15,13 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Prepare SQL statement
-    $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+    $sql = "INSERT INTO users (username, email, password, user_type) VALUES (:username, :email, :password, :user_type)";
     $stmt = $pdo->prepare($sql);
 
     // Bind parameters and execute the statement
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+    $stmt->bindParam(':user_type', $user_type, PDO::PARAM_STR);
 
     try {
         $stmt->execute();
