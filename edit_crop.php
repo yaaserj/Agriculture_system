@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
             $landArea = $_POST['landArea'];
 
             // Update crop details in the database
-            $stmt = $pdo->prepare("UPDATE crop_management SET crop_type = :cropType, planting_date = :plantingDate, harvest_date = :harvestDate, land_area = :landArea WHERE id = :id");
+            $stmt = $pdo->prepare("UPDATE crop_management SET crop_type = :cropType, planting_date = :plantingDate, harvest_date_estimated = :harvestDate, land_area_ha = :landArea WHERE id = :id");
             $stmt->bindParam(':cropType', $cropType);
             $stmt->bindParam(':plantingDate', $plantingDate);
             $stmt->bindParam(':harvestDate', $harvestDate);
