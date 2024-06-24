@@ -41,99 +41,99 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Agricultural Management System - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(45deg, #83a4d4, #b6fbff);
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .container {
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        width: 100%;
-        max-width: 400px;
-        animation: fadeIn 1s;
-    }
-
-    .header h1 {
-        margin: 0;
-        font-size: 24px;
-        color: #333;
-    }
-
-    .main-content {
-        margin-top: 20px;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    label {
-        margin-bottom: 5px;
-        text-align: left;
-    }
-
-    input[type="text"],
-    input[type="password"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-bottom: 15px;
-        width: calc(100% - 20px);
-        margin: 0 auto;
-    }
-
-    button[type="submit"] {
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-        background-color: #45a049;
-    }
-
-    .forgot-password {
-        color: #007bff;
-        text-decoration: none;
-        margin-top: 10px;
-        display: inline-block;
-    }
-
-    .remember-me {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        justify-content: center;
-    }
-
-    .remember-me input {
-        margin-right: 5px;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #83a4d4, #b6fbff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        to {
-            opacity: 1;
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s;
         }
-    }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .main-content {
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+
+        .remember-me input {
+            margin-right: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -162,17 +162,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <script>
-    function validateForm() {
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
-        if (username.trim() === '' || password.trim() === '') {
-            alert('Please fill out all fields.');
-            return false;
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            return true;
         }
-
-        return true;
-    }
     </script>
 </body>
 
