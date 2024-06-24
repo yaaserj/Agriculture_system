@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get form data
     $cropType = htmlspecialchars($_POST['cropType']);
     $plantingDate = htmlspecialchars($_POST['plantingDate']);
-    $harvestDate = htmlspecialchars($_POST['harvestDate']);
+    $harvestDate = htmlspecialchars($_POST['harvestDateEstimated']);
     $landArea = htmlspecialchars($_POST['landArea']);
 
     try {
